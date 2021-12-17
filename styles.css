@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    height: 100vh;
+    background-color: cadetblue;
+
+}
+
+header {
+
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: #c9e9e4;
+    animation-name: headerAppear;
+    animation-duration: 1s;
+    position: sticky;
+
+}
+
+#menu {
+
+    display: flex;
+
+}
+
+
+#menu ul {
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+}
+
+#menu ul li {
+
+    margin: 40px;
+
+}
+
+#contact-button {
+
+    border-radius: 50px;
+    background-color: beige;
+    border: none;
+    padding: 30px;
+
+}
+
+#contact-button:hover {
+
+    cursor: pointer;
+
+
+}
+
+
+.main-animation-container {
+
+    display: flex;
+    height: 100%;
+
+}
+
+.main-content {
+
+    position: none;
+    display: none;
+    height: 85%;
+
+}
+
+.left-side {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: beige;
+
+}
+
+
+.main-info {
+
+    height: 50%;
+    width: 40%;
+    margin-left: 10%;
+    background-color: beige;
+    font-family: 'Readex Pro', sans-serif;
+
+}
+
+h1{
+
+    font-size: 72px;
+    font-family: 'Paytone One', sans-serif;
+
+}
+
+p{
+
+    font-size: 16px;
+
+}
+
+h3{
+
+color: #00ffbb;
+margin-bottom: 3%;
+
+}
+
+
+.right-side {
+
+    width: 50%;
+    height: 100%;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-overflow {
+
+    height: 60%;
+    overflow: hidden;
+
+}
+
+#emoji {
+
+    height: 100%;
+    width: 100%;
+    margin-left: 100%;
+    animation-delay: 1s;
+    animation-name: imgApear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /*animation-timing-function: linear;*/
+
+}
+
+.column-apear {
+
+    width: 33.33%;
+    height: 0;
+    background-color: beige;
+    animation-name: apearColumns;
+
+}
+
+.column-apear:nth-child(1) {
+
+
+    animation-duration: 0.8s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /*border-right: 1px solid black;*/
+}
+
+.column-apear:nth-child(2) {
+
+    /*animation-name: apear;*/
+    animation-duration: 0.8s;
+    animation-delay: 1.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /*border-right: 1px solid black;*/
+}
+
+.column-apear:nth-child(3) {
+
+    /*animation-name: apear;*/
+    animation-duration: 0.8s;
+    animation-delay: 1.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes apearColumns {
+
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+
+}
+
+@keyframes imgApear {
+
+    from {
+
+        display: none;
+        margin-left: 100%;
+        filter: opacity(0%);
+
+    }
+
+    to {
+
+        display: inline-block;
+        margin-left: -20%;
+        filter: opacity(100%);
+
+    }
+
+}
+
+@keyframes headerAppear {
+
+    from {
+        filter: opacity(0%);
+    }
+
+    to {
+        filter: opacity(100%);
+    }
+
+}
