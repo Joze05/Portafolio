@@ -6,6 +6,7 @@ let body = document.body;
 let mainContent = document.getElementsByClassName("main-content");
 let emoji = document.getElementById("emoji");
 let header = document.getElementsByTagName("header");
+let sticky = header[0].offsetTop;
 
 for (let i = 0; i < columnApear.length; i++) {
   columnApear[2].addEventListener("animationend", function () {
@@ -21,3 +22,15 @@ for (let i = 0; i < columnApear.length; i++) {
     header[0].style.display = "flex";
   });
 }
+
+function stickyHeader() {
+  if (window.pageYOffset >= sticky) {
+    header[0].classList.add("sticky");
+  } else {
+    header[0].classList.remove("sticky");
+  }
+}
+
+window.onscroll = function () {
+  stickyHeader();
+};

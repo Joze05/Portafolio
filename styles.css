@@ -24,10 +24,27 @@ header {
     align-items: center;
     height: 15%;
     width: 100%;
-    background-color: #c9e9e4;
+    background-color: #c9e9e488;
     animation-name: headerAppear;
     animation-duration: 1s;
-    position: sticky;
+    z-index: 1;
+    /*font-weight: bold;*/
+    font-family: 'Readex Pro', sans-serif;
+
+}
+
+.sticky{
+
+position: fixed;
+top:0;
+width: 100%;
+
+}
+
+
+#home-icon:hover {
+
+    cursor: pointer;
 
 }
 
@@ -52,19 +69,45 @@ header {
 
 }
 
+#menu ul li:hover {
+
+    cursor: pointer;
+
+}
+
+#menu ul li:nth-child(1) {
+
+    color: #00ffbb;
+
+}
+
 #contact-button {
 
     border-radius: 50px;
     background-color: beige;
     border: none;
-    padding: 30px;
+    padding: 25px;
+    font-family: 'Readex Pro', sans-serif;
+    transition: 0.5s;
 
 }
 
 #contact-button:hover {
 
     cursor: pointer;
+    background-color: rgb(228, 228, 202);
 
+}
+
+#home-icon {
+
+    transition: 0.3s;
+
+}
+
+#home-icon:hover {
+
+    transform: scale(1.1, 1.1);
 
 }
 
@@ -78,9 +121,9 @@ header {
 
 .main-content {
 
-    position: none;
+    position: relative;
     display: none;
-    height: 85%;
+    height: 100%;
 
 }
 
@@ -101,31 +144,125 @@ header {
     height: 50%;
     width: 40%;
     margin-left: 10%;
-    background-color: beige;
+    /*background-color: beige;*/
     font-family: 'Readex Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+
 
 }
 
-h1{
 
-    font-size: 72px;
+.main-info div:nth-child(1) {}
+
+.main-info div:nth-child(2) {}
+
+.name-container h1 {
+
+    animation-name: appearOpacity;
+    animation-duration: 3s;
+
+}
+
+.main-info div:nth-child(3) {}
+
+#rol-description {
+
+    margin-top: -15%;
+    animation-name: mainInfoAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+    animation-timing-function: ease-out;
+
+}
+
+.main-info div:nth-child(4) {}
+
+#short-description {
+
+    margin-top: -20%;
+    animation-name: mainInfoAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+
+}
+
+
+
+.overflow-hidden {
+
+    overflow: hidden;
+
+}
+
+.position-relative {
+
+    position: relative;
+
+}
+
+#greeting {}
+
+h1 {
+
+    font-size: 75px;
     font-family: 'Paytone One', sans-serif;
 
 }
 
-p{
+.name-container h1:nth-child(1) {
+
+    font-size: 78px;
+    margin-bottom: -10%;
+
+}
+
+
+p {
 
     font-size: 16px;
 
 }
 
-h3{
+h3 {
 
-color: #00ffbb;
-margin-bottom: 3%;
+    color: #00ffbb;
 
 }
 
+
+#hireMeButton-container {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+
+}
+
+#hireMe-button {
+
+    border-radius: 50px;
+    background-color: #c9e9e4;
+    border: none;
+    padding: 5%;
+    width: 40%;
+    font-family: 'Readex Pro', sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: -15%;
+    animation-name: mainInfoAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+#hireMe-button:hover {
+
+    background-color: #9bc4bd;
+
+}
 
 .right-side {
 
@@ -155,6 +292,25 @@ margin-bottom: 3%;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     /*animation-timing-function: linear;*/
+
+}
+
+.about-me{
+
+position: relative;
+width: 100%;
+height: 100%;
+z-index: -1;
+background-color: rgb(209, 209, 181);
+    
+}
+
+.contact-me{
+
+position: none;
+width: 100%;
+height: 100%;
+background-color: beige;
 
 }
 
@@ -238,6 +394,30 @@ margin-bottom: 3%;
 
     to {
         filter: opacity(100%);
+    }
+
+}
+
+@keyframes mainInfoAppear {
+
+    from {
+        margin-top: -15%;
+    }
+
+    to {
+        margin-top: 0%;
+    }
+
+}
+
+@keyframes appearOpacity {
+
+    from {
+        filter: opacity(0);
+    }
+
+    to {
+        filter: opacity(1);
     }
 
 }
