@@ -24,7 +24,7 @@ header {
     align-items: center;
     height: 15%;
     width: 100%;
-    background-color: #c9e9e488;
+    background-color: #c9e9e4ce;
     animation-name: headerAppear;
     animation-duration: 1s;
     z-index: 1;
@@ -33,11 +33,51 @@ header {
 
 }
 
-.sticky{
+.sticky {
 
-position: fixed;
-top:0;
-width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+
+.column-apear {
+
+    width: 33.33%;
+    height: 0;
+    background-color: beige;
+    animation-name: apearColumns;
+
+}
+
+.column-apear:nth-child(1) {
+
+
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /*border-right: 1px solid black;*/
+}
+
+.column-apear:nth-child(2) {
+
+    /*animation-name: apear;*/
+    animation-duration: 0.5s;
+    animation-delay: 1.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /*border-right: 1px solid black;*/
+}
+
+.column-apear:nth-child(3) {
+
+    /*animation-name: apear;*/
+    animation-duration: 0.5s;
+    animation-delay: 1.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 
 }
 
@@ -205,11 +245,16 @@ width: 100%;
 
 #greeting {}
 
-h1 {
+.name-container h1{
 
-    font-size: 75px;
     font-family: 'Paytone One', sans-serif;
 
+}
+
+.name-container h1:nth-child(2) {
+
+    font-size: 75px;
+    
 }
 
 .name-container h1:nth-child(1) {
@@ -295,61 +340,76 @@ h3 {
 
 }
 
-.about-me{
+.about-me {
 
-position: relative;
-width: 100%;
-height: 100%;
-z-index: -1;
-background-color: rgb(209, 209, 181);
-    
-}
-
-.contact-me{
-
-position: none;
-width: 100%;
-height: 100%;
-background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    /*z-index: -1;*/
+    background-color: rgb(209, 209, 181);
+    font-family: 'Readex Pro', sans-serif;
+    font-size: small;
 
 }
 
-.column-apear {
+.about-me div{
 
-    width: 33.33%;
-    height: 0;
+margin: 0 0 3% 3%;
+
+}
+
+.aboutMeInfo-container{
+
+width: 20%;
+display: flex;
+flex-direction: column;
+
+}
+
+.aboutMeInfo-container h1{
+
+margin: 4% 0 2% 0;
+
+}
+
+.photo-container{
+
+border-top: 3px #00ffbb solid;
+border-left: 3px #00ffbb solid;
+
+}
+
+.whoIAm-title-container{
+
+display: flex;
+flex-direction: column;
+justify-content: start;
+
+}
+
+.color-bar{
+
+width: 12%;
+height: 5px;
+background-color: #00ffbb;
+animation-name: moveSideBySide;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: linear;
+
+}
+
+
+.contact-me {
+
+    position: none;
+    width: 100%;
+    height: 100%;
     background-color: beige;
-    animation-name: apearColumns;
-
-}
-
-.column-apear:nth-child(1) {
-
-
-    animation-duration: 0.8s;
-    animation-delay: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    /*border-right: 1px solid black;*/
-}
-
-.column-apear:nth-child(2) {
-
-    /*animation-name: apear;*/
-    animation-duration: 0.8s;
-    animation-delay: 1.2s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    /*border-right: 1px solid black;*/
-}
-
-.column-apear:nth-child(3) {
-
-    /*animation-name: apear;*/
-    animation-duration: 0.8s;
-    animation-delay: 1.4s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
 
 }
 
@@ -419,5 +479,18 @@ background-color: beige;
     to {
         filter: opacity(1);
     }
+
+}
+
+@keyframes moveSideBySide{
+
+from{
+    transform: translate(0%);
+}
+
+to{
+transform: translate(100%);
+
+}
 
 }

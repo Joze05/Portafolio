@@ -34,3 +34,11 @@ function stickyHeader() {
 window.onscroll = function () {
   stickyHeader();
 };
+
+window.addEventListener('scroll', function(){
+
+let animatedPhoto = document.getElementById("photo");
+let photoPosition = animatedPhoto.getBoundingClientRect().top;
+console.log(photoPosition);
+
+})
